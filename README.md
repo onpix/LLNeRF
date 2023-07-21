@@ -26,9 +26,9 @@
 
 2. 📂 **Download the dataset:** Our dataset is [here](https://drive.google.com/drive/folders/1h-u8DkvuaIvcHZihYIWcqwpURiM32_u3?usp=sharing). Please download and unzip it.
 
-3. 🏃 **Training:** Pleaase modify `scripts/train.sh` first by replacing the dataset path to yours, and run `bash scripts/train.sh`.
+3. 🏃 **Training:** Pleaase modify `scripts/train.sh` first by replacing the dataset path and scene name with yours, and run `bash scripts/train.sh`.
 
-4. 🎥 **Rendering:** Pleaase modify `scripts/render.sh` first by replacing the dataset path to yours, and run `bash scripts/render.sh`.
+4. 🎥 **Rendering:** Pleaase modify `scripts/render.sh` first by replacing the dataset path and scene name with yours, and run `bash scripts/render.sh`.
 
 Note: this version of the code has not undergone comprehensive testing and might contain minor issues. I will thoroughly test it and plan to release an updated version these days. If you encounter any problems, feel free to open a github issue.
 
@@ -42,3 +42,7 @@ Note: this version of the code has not undergone comprehensive testing and might
   year={2023}
 }
 ```
+
+## 😃 Acknowledgments
+
+This repository is based on jax and [MultiNeRF](https://github.com/google-research/multinerf) - special thanks to their code!
