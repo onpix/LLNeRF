@@ -1,0 +1,10 @@
+include 'configs/llff_raw.gin'
+
+Config.factor = 1
+Config.rawnerf_mode = False
+Model.learned_exposure_scaling = False
+Config.data_loss_type = 'mse'
+Config.disable_multiscale_loss = True
+Config.cast_rays_in_train_step = True
+NerfMLP.decompose_LR = True
+NerfMLP.num_rgb_channels = 1        # here 'rgb' is actually L.
