@@ -10,6 +10,7 @@
 
 ## 📻 News
 
+- `[2023/07/24]` &nbsp;&centerdot;&nbsp; Update normal-light scenes data.
 - `[2023/07/21]` &nbsp;&centerdot;&nbsp; Code released ! 🔥🔥🔥
 - `[2023/07/17]` &nbsp;&centerdot;&nbsp; Paper accepted by ICCV 2023.
 
