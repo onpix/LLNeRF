@@ -470,11 +470,6 @@ def create_train_step(model: models.Model,
       stats['loss'] = jnp.sum(jnp.array(list(losses.values())))
       stats['losses'] = losses
 
-      if 'rgb_enhanced' in renderings[-1]:
-        stats['Gpsnr'] = image.mse_to_psnr(
-          ((1.5 * renderings[-1]['rgb'] ** 0.45 - 1.5 * batch.rgb[..., :3] ** 0.45) ** 2).mean())
-        stats['CePsnr'] = image.mse_to_psnr(
-          ((renderings[-1]['rgb_enhanced'] - 1.5 * renderings[-1]['rgb'] ** 0.45) ** 2).mean())
       return stats['loss'], stats
 
     loss_grad_fn = jax.value_and_grad(loss_fn, has_aux=True)

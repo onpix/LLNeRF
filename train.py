@@ -212,15 +212,13 @@ def main(unused_argv):
         precision = int(np.ceil(np.log10(config.max_steps))) + 1
         avg_loss = avg_stats['loss']
         avg_psnr = avg_stats['psnr'] if 'psnr' in avg_stats else -1
-        avg_g_psnr = avg_stats['Gpsnr'] if 'Gpsnr' in avg_stats else -1
-        avg_ce_psnr = avg_stats['CePsnr'] if 'CePsnr' in avg_stats else -1
         str_losses = {  # Grab each "losses_{x}" field and print it as "x[:4]".
           k[7:11]: (f'{v:0.5f}' if v >= 1e-4 and v < 10 else f'{v:0.1e}')
           for k, v in avg_stats.items()
           if k.startswith('losses/')
         }
         print_func(f'[{datetime.datetime.now().strftime("%H:%M:%S")}] {step:{precision}d}' + f'/{config.max_steps:d}: ' +
-                   f'loss={avg_loss:0.5f}, ' + f'psnr={avg_psnr:6.3f}, Gpsnr={avg_g_psnr:6.3f}, CePsnr={avg_ce_psnr:6.3f}, ' +
+                   f'loss={avg_loss:0.5f}, ' + f'psnr={avg_psnr:6.3f}, ' +
                    f'lr={learning_rate:0.2e} | ' +
                    ', '.join([f'{k}={s}' for k, s in str_losses.items()]) +
                    f', {rays_per_sec:0.0f} r/s')
