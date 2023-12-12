@@ -38,7 +38,7 @@ Note: this version of the code has not undergone comprehensive testing and might
 ```bibtex
 @inproceedings{wang2023lighting,
   title={Lighting up NeRF via Unsupervised Decomposition and Enhancement},
-  author={Haoyuan Wang, Xiaogang Xu, Ke Xu, and Rynson W.H. Lau},
+  author={Haoyuan Wang and Xiaogang Xu and Ke Xu and Rynson W.H. Lau},
   booktitle={ICCV},
   year={2023}
 }
